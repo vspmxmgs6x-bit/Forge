@@ -3,10 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>FORGE Health & Performance Dashboard</title>
 </head>
 <body>
-    <h1>Welcome to the FORGE Health & Performance Dashboard</h1>
-    <p>This dashboard provides insights into health and performance metrics.</p>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#nutrition">Nutrition</a></li>
+                <li><a href="#training">Training</a></li>
+                <li><a href="#metrics">Metrics</a></li>
+                <li><a href="#PRs">Personal Records</a></li>
+                <li><a href="#water-tracker">Water Tracker</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="nutrition">
+            <h2>Nutrition</h2>
+            <div id="meal-logging">
+                <form id="meal-form">
+                    <input type="text" id="meal" placeholder="Enter meal" required>
+                    <input type="number" id="calories" placeholder="Calories" required>
+                    <button type="submit">Log Meal</button>
+                </form>
+                <ul id="meal-log"></ul>
+            </div>
+        </section>
+        <section id="training">
+            <h2>Training</h2>
+            <div id="cardio-planning">
+                <form id="cardio-form">
+                    <input type="text" id="exercise" placeholder="Enter exercise" required>
+                    <input type="number" id="duration" placeholder="Duration (min)" required>
+                    <button type="submit">Log Cardio</button>
+                </form>
+                <ul id="cardio-log"></ul>
+            </div>
+        </section>
+        <section id="metrics">
+            <h2>Metrics</h2>
+            <div id="metrics-tracking">
+                <form id="metrics-form">
+                    <input type="text" id="metric-name" placeholder="Metric name" required>
+                    <input type="number" id="metric-value" placeholder="Value" required>
+                    <button type="submit">Track Metric</button>
+                </form>
+                <ul id="metrics-log"></ul>
+            </div>
+        </section>
+        <section id="PRs">
+            <h2>Personal Records</h2>
+            <ul id="pr-log"></ul>
+        </section>
+        <section id="water-tracker">
+            <h2>Water Tracker</h2>
+            <input type="number" id="water-intake" placeholder="Water intake (liters)" required>
+            <button id="log-water">Log Water Intake</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 FORGE Dashboard</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
